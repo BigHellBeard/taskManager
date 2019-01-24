@@ -3,5 +3,6 @@
 </IfModule>
 Options +FollowSymLinks
 RewriteEngine on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https 
 RewriteCond %{REQUEST_URI} ^/route/(.*)/$ 
 RewriteRule ^(.*) /route/ 
